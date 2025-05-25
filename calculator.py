@@ -1,4 +1,42 @@
-def add(x, y):
+#include <stdio.h>
+
+int main() {
+    double n1 = 0.0, n2 = 0.0, result = 0.0;
+    char operation = ' ';
+    while (1) {
+        while (scanf("%lf %c %lf", &n1, &operation, &n2) != 3) {
+            printf("Error.\n");
+            while ((getchar()) != '\n'); // Clear the input buffer
+        }
+        switch (operation) {
+            case '+':
+                result = n1 + n2;
+                printf("%lf\n", result);
+                return 0;
+            case '-':
+                result = n1 - n2;
+                printf("%lf\n", result);
+                return 0;
+            case '*':
+                result = n1 * n2;
+                printf("%lf\n", result);
+                return 0;
+            case '/':
+                if (n2 != 0) {
+                    result = n1 / n2;
+                    printf("%lf\n", result);
+                    return 0;
+                } else {
+                    printf("Error! Division by zero.\n");
+                    return 1;
+                }
+            default:
+                printf("Error! Invalid Operator.\n");
+                break;
+        }
+    }
+    return 0;
+}def add(x, y):
     return x + y
 
 def subtract(x, y):
@@ -36,4 +74,4 @@ while True:
         elif choice == '4':
             print(num1, "/", num2, "=", divide(num1, num2))
     else:
-        print("Invalid Input")
+        print("Invalid Input"i)
