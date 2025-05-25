@@ -73,7 +73,7 @@ while True:
             print(num1, "*", num2, "=", multiply(num1, num2))
         elif choice == '4':
             print(num1, "/", num2, "=", divide(num1, num2))
-    else:
+  
         print("Invalid Input"i)
 
 
@@ -127,3 +127,6 @@ def advanced_calculator():
 
 # Call the advanced calculator function to run it
 advanced_calculator()
+
+        print("Invalid Input")
+
